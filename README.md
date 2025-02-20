@@ -54,7 +54,7 @@ You can follow the environment of [Mono3DVG]([https://github.com/ZrrSkywalker/Mo
     │   ├──Mono3DRefer.json
     │   ├──test_instanceID_split.json
     ├──configs
-    │   ├──mono3dvg.yaml
+    │   ├──JLN.yaml
     │   ├──checkpoint_best_MonoDETR.pth
     ├──lib
     │   ├──datasets/
@@ -70,10 +70,11 @@ You can follow the environment of [Mono3DVG]([https://github.com/ZrrSkywalker/Mo
     ├──utils
     │   ├──...
     ├──outputs    #  save_path
-    │   ├──mono3dvg
+    │   ├──JLN
     │   │   ├──...
     ├──test.py
     ├──train.py
+    ├──val.py
 ```
     
 You can also change the dataset path at "root_dir" in `configs/JLN.yaml`.
