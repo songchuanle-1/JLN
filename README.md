@@ -136,14 +136,25 @@ You can change it at "pretrain_model: 'checkpoint_best.pth'" in `configs/mono3dv
     python val.py --config configs/JLN.yaml
 ```
 
-## 👁️ Visualization
-### 1. Comparison with baselines.
+## 👁️ Results and Visualization
+
+### 1. Comparison of Different Methods.
+
+<div align="center">
+  <img src="image/table1.png"/>
+</div>
+
+<div align="center">
+  <img src="image/table2.png"/>
+</div>
+
+### 2. Qualitative Analysis.
 
 <div align="center">
   <img src="image/visual.png"/>
 </div>
 
-### 2. Foreground focus and background suppression visual.
+### 3. Foreground focus and background suppression visual.
 
 <div align="center">
   <img src="image/featuremap.png"/>
