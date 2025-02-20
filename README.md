@@ -138,7 +138,12 @@ You can change it at "pretrain_model: 'checkpoint_best.pth'" in `configs/mono3dv
     python test.py --config configs/JLN.yaml
 ```
 
+#### (3). Inference Result
 
+You can change it at "pretrain_model: 'checkpoint_best.pth'" in `configs/mono3dvg.yaml`:
+```
+    python val.py --config configs/JLN.yaml
+```
 
 ## 👁️ Visualization
 ### 1. Comparison with baselines.
@@ -155,4 +160,4 @@ You can change it at "pretrain_model: 'checkpoint_best.pth'" in `configs/mono3dv
 Our code is based on (AAAI 2024)[Mono3DVG](https://github.com/ZhanYang-nwpu/Mono3DVG/tree/main/). We sincerely appreciate their contributions and authors for releasing source codes.
 
 ## 🤖 Contact
-If you have any questions about this project, please feel free to contact zhanyangnwpu@gmail.com.
+If you have any questions about this project, please feel free to contact songchle@mail2.sysu.edu.cn.
