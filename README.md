@@ -151,7 +151,9 @@ You can change it at "pretrain_model: 'checkpoint_best.pth'" in `configs/mono3dv
 <div align="center">
   <img src="image/visual.pdf"/>
 </div>
+
 ### 2. Foreground focus and background suppression visual.
+
 <div align="center">
   <img src="image/featuremap.pdf"/>
 </div>
