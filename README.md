@@ -8,11 +8,11 @@ This is the official repository for paper **"From Contrastive to Separation: A J
 
 ## 💬 JLN
 <div align="center">
-  <img src="images/mainpage.pdf"/>
+  <img src="image/mainpage.pdf"/>
 </div>
 We proposes a Joint Learning Network(JLN). Specifically, a multi-sample feature pairs contrastive learning strategy is designed to aggregate multimodal global features. By introducing contrastive learning between global features of different samples, the proposed method enhances multimodal feature consistency within the same sample pair and discriminability between different sample pairs. Additionally, 2D region guidance is utilized to achieve foreground-background separation in both visual and depth feature learning.  Our JLN achieves a 8.16\% improvement in Acc@0.5IoU over state-of-the-art methods. Furthermore, additional experiments on the Mono3DRefer dataset further demonstrate the effectiveness of the proposed modules.
 <div align="center">
-  <img src="images/framework.pdf"/>
+  <img src="image/framework.pdf"/>
 </div>
 
 ## 🌋 Dataset
