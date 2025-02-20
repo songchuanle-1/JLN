@@ -1,26 +1,14 @@
-# <img src="images/logo_Mono3DVG.png" height="40"> Mono3DVG: 3D Visual Grounding in Monocular Images
-<p align="center">
-    <img src="https://i.imgur.com/waxVImv.png" alt="Oryx Video-ChatGPT">
-</p>
 
-##### Author: Yang Zhan, Yuan Yuan, Zhitong Xiong 
-This is the official repository for paper **"Mono3DVG: 3D Visual Grounding in Monocular Images"**. [[AAAI paper](https://doi.org/10.1609/aaai.v38i7.28525)]     [[ArXiv paper](https://arxiv.org/pdf/2312.08022.pdf)]    [[AAAI Video/Poster](https://ojs.aaai.org/index.php/AAAI/article/view/28525/29024)]
+# From Contrastive to Separation: A Joint Learning Network for Monocular 3D Visual Grounding
 
-The paper has been accepted by **AAAI 2024** 🎉.
-
-**School of Artificial Intelligence, OPtics, and ElectroNics (iOPEN), Northwestern Polytechnical University**
+##### Author: Chuanle Song, Yihua Huang
+This is the official repository for paper **"From Contrastive to Separation: A Joint Learning Network for Monocular 3D Visual Grounding"**
 ## Please share a <font color='orange'>STAR ⭐</font> if this project does help
 
 ···
 python test.py --config /sdc1/songcl/mono3D/JLN/configs/JLN.yaml
 python train_three.py --config /sdc1/songcl/mono3D/JLN/configs/JLN.yaml
 ···
-## 📢 Latest Updates
-- **Dec-09-2023**: Mono3DVG paper is accepted by AAAI2024. 🔥🔥
-- **Dec-29-2023**: Mono3DRefer dataset is released. 🔥🔥
-- **Mar-13-2024**: Mono3DVG-TR codebase and checkpoint are released. 🔥🔥
-- 📦 Components for the result visualization of Mono3DVG coming soon! 🚀
----
 
 ## 💬 Mono3DVG: 3D Visual Grounding in Monocular Images
 We introduce a novel task of 3D visual grounding in monocular RGB images using descriptions with appearance and geometry information, termed Mono3DVG.
@@ -50,7 +38,7 @@ Mono3DVG-TR is the **first end-to-end transformer-based network** for monocular 
 
 ## 📦 Mono3DVG-TR Codebase
 ### 1. Environment and Installation
-You can follow the environment of [MonoDETR](https://github.com/ZrrSkywalker/MonoDETR).
+You can follow the environment of [Mono3DVG]([https://github.com/ZrrSkywalker/MonoDETR](https://github.com/ZhanYang-nwpu/Mono3DVG/tree/main/)).
 
 #### 1.1 Clone this project and create a conda environment: python>=3.8, our version of python == 3.10.8
 
@@ -60,15 +48,14 @@ You can follow the environment of [MonoDETR](https://github.com/ZrrSkywalker/Mon
 ```
     pip install -r requirements.txt
 
-    cd lib/models/mono3dvg/ops/
+    cd lib/models/JLN/ops/
     bash make.sh
-    
     cd ../../../..
 ```
 #### 1.4 Download [Mono3DRefer](https://drive.google.com/drive/folders/1ICBv0SRbRIUnl_z8DVuH8lz7KQt580EI?usp=drive_link) datasets and prepare the **directory structure** as:
 
 ```
-    │Mono3DVG/
+    │JLN/
     ├──Mono3DRefer/
     │   ├──images/
     │   │   ├──000000.png
@@ -104,9 +91,9 @@ You can follow the environment of [MonoDETR](https://github.com/ZrrSkywalker/Mon
     ├──train.py
 ```
     
-You can also change the dataset path at "root_dir" in `configs/mono3dvg.yaml`.
+You can also change the dataset path at "root_dir" in `configs/JLN.yaml`.
 
-You can also change the save path at "save_path" in `configs/mono3dvg.yaml`.
+You can also change the save path at "save_path" in `configs/JLN.yaml`.
 
 #### 1.5 Download pre-trained model and checkpoint
 
@@ -133,9 +120,9 @@ You can download the checkpoint we provide to evaluate the Mono3DVG-TR model.
         <td div align="center">`checkpoint_best_MonoDETR.pth`</td>
     </tr>  
     <tr>
-        <td div align="center">Best checkpoint (Mono3DVG-TR)</td> 
-        <td div align="center"><a href="https://drive.google.com/file/d/17MzREl1duTEF5E7_dVuwINkuHVCItS5V/view?usp=drive_link">model</a></td>
-        <td div align="center">`outputs\mono3dvg\`</td>
+        <td div align="center">Best checkpoint (JLN)</td> 
+        <td div align="center"><a https://pan.baidu.com/s/18rtZ8jgcmd2MjrNMjyp5LA?pwd=52ks">model</a></td>
+        <td div align="center">`outputs\JLN\`</td>
         <td div align="center">`checkpoint_best.pth`</td>
     </tr> 
 </table>
@@ -145,9 +132,9 @@ You can download the checkpoint we provide to evaluate the Mono3DVG-TR model.
 
 #### (1). Train
 
-You can modify the settings of GPU, models and training in `configs/mono3dvg.yaml`
+You can modify the settings of GPU, models and training in `configs/JLN.yaml`
 ```
-    CUDA_VISIBLE_DEVICES=1 python train.py
+    python train.py --config configs/JLN.yaml
 ```
 
 #### (2). Test
@@ -155,7 +142,7 @@ You can modify the settings of GPU, models and training in `configs/mono3dvg.yam
 The best checkpoint will be evaluated as default.
 You can change it at "pretrain_model: 'checkpoint_best.pth'" in `configs/mono3dvg.yaml`:
 ```
-    CUDA_VISIBLE_DEVICES=1 python test.py
+    python test.py --config configs/JLN.yaml
 ```
 
 
