@@ -8,11 +8,11 @@ This is the official repository for paper **"From Contrastive to Separation: A J
 
 ## 💬 JLN
 <div align="center">
-  <img src="image/mainpage.pdf"/>
+  <img src="image/mainpage.png"/>
 </div>
 We proposes a Joint Learning Network(JLN). Specifically, a multi-sample feature pairs contrastive learning strategy is designed to aggregate multimodal global features. By introducing contrastive learning between global features of different samples, the proposed method enhances multimodal feature consistency within the same sample pair and discriminability between different sample pairs. Additionally, 2D region guidance is utilized to achieve foreground-background separation in both visual and depth feature learning.  Our JLN achieves a 8.16\% improvement in Acc@0.5IoU over state-of-the-art methods. Furthermore, additional experiments on the Mono3DRefer dataset further demonstrate the effectiveness of the proposed modules.
 <div align="center">
-  <img src="image/framework.pdf"/>
+  <img src="image/framework.png"/>
 </div>
 
 ## 🌋 Dataset
@@ -20,15 +20,6 @@ Download our Mono3DRefer dataset. We build the first dataset for Mono3DVG, terme
 ```
 https://drive.google.com/drive/folders/1ICBv0SRbRIUnl_z8DVuH8lz7KQt580EI?usp=drive_link
 ```
-
-
-## <img src="images/logo_Mono3DVG.png" height="20"> Mono3DVG-TR: Architecture
-
-Mono3DVG-TR is the **first end-to-end transformer-based network** for monocular 3D visual grounding. 
-<div align="center">
-  <img src="images/model.png"/>
-</div>
-
 
 ## 📦 JLN Codebase
 ### 1. Environment and Installation
@@ -149,13 +140,13 @@ You can change it at "pretrain_model: 'checkpoint_best.pth'" in `configs/mono3dv
 ### 1. Comparison with baselines.
 
 <div align="center">
-  <img src="image/visual.pdf"/>
+  <img src="image/visual.png"/>
 </div>
 
 ### 2. Foreground focus and background suppression visual.
 
 <div align="center">
-  <img src="image/featuremap.pdf"/>
+  <img src="image/featuremap.png"/>
 </div>
 
 ## 🙏 Acknowledgement
